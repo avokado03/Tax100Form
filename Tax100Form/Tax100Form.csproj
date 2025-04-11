@@ -18,10 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectCapability Remove="Models\Tax100XmlModel.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectCapability Remove="Models\Tax100Model.cs" />
   </ItemGroup>
 
