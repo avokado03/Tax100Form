@@ -1,0 +1,6 @@
+@Tax100Form_HostAddress = http://localhost:5214
+
+GET {{Tax100Form_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
