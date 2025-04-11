@@ -1,9 +1,16 @@
+using Tax100Form.Options;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Configuration
+	.AddUserSecrets<Program>()
+	.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+	.AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: true);
+builder.Services.AddOptions<Tax100MainOptions>();
 
 var app = builder.Build();
 
