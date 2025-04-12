@@ -7,20 +7,20 @@ namespace Tax100Form.Models
 	{
 		#region page_100_00_01
 		[Description("iin")]
-		public string BIN { get; set; }
+		public required string BIN { get; set; }
 
 		[Description("rnn")]
-		public string RNN { get; set; }
+		public required string RNN { get; set; }
 
 		#region Name
 		[Description("payer_name1")]
-		public string Name1 { get; set; }
+		public required string Name1 { get; set; }
 
 		[Description("payer_name2")]
-		public string Name2 { get; set; }
+		public required string Name2 { get; set; }
 
 		[Description("payer_name3")]
-		public string Name3 { get; set; }
+		public required string Name3 { get; set; }
 		#endregion
 		#endregion
 
@@ -29,7 +29,7 @@ namespace Tax100Form.Models
 		/// Период отчетности
 		/// </summary>
 		[Description("period_year")]
-		public string PeriodYear { get; set; }
+		public required string PeriodYear { get; set; }
 
 		/// <summary>
 		/// Доход от реализации
@@ -160,11 +160,18 @@ namespace Tax100Form.Models
         public int NetRevenue { get; set; }
 
 		/// <summary>
-		/// ВСЕГО КПН, за исключением  КПН с облагаемого дохода КИК и ПУ КИК
-		/// в соответствии с подпунктом 4) статьи 223 Налогового кодекса
-		/// (100.00.059 + 100.00.061 I или 100.00.061 II + 100.00.064)
+		/// КПН на чистый доход, исчисленный:
+		/// КПН на чистый доход по ставке 15%
 		/// </summary>
-		[Description("field_100_00_062")]
+		[Description("field_100_00_061_04_1")]
+        public int KPNNetRevenue15 { get; set; }
+
+        /// <summary>
+        /// ВСЕГО КПН, за исключением  КПН с облагаемого дохода КИК и ПУ КИК
+        /// в соответствии с подпунктом 4) статьи 223 Налогового кодекса
+        /// (100.00.059 + 100.00.061 I или 100.00.061 II + 100.00.064)
+        /// </summary>
+        [Description("field_100_00_062")]
         public int TotalKPN { get; set; }
 
 		/// <summary>
@@ -195,16 +202,22 @@ namespace Tax100Form.Models
 		/// Фамилия, имя, отчество (при его наличии) налогоплательщика
 		/// </summary>
 		[Description("head_name")]
-        public string HeadName { get; set; }
+        public required string HeadName { get; set; }
 
 		/// <summary>
 		/// Код органа государственных доходов
 		/// </summary>
 		[Description("rating_auth_code")]
-		public string RatingAuthCode { get; set; }
+		public required string RatingAuthCode { get; set; }
 
 		[Description("submit_date")]
-        public string SubmitDate { get; set; }
-		#endregion
-	}
+        public required string SubmitDate { get; set; }
+        #endregion
+
+        public Tax100Model()
+        {
+            
+        }
+    }
+
 }

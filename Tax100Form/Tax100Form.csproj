@@ -25,4 +25,20 @@
     <ProjectCapability Remove="Options\Tax100MainOptions.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectCapability Remove="Models\Tax100Request.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectCapability Remove="Models\App7Model.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectCapability Remove="Models\Requests\App7Request.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectCapability Remove="Models\Requests\TotalTax100Request.cs" />
+  </ItemGroup>
+
 </Project>
