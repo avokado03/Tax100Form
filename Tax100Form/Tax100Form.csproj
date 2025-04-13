@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
     <Folder Include="Utils\" />
   </ItemGroup>
 
@@ -39,6 +38,22 @@
 
   <ItemGroup>
     <ProjectCapability Remove="Models\Requests\TotalTax100Request.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectCapability Remove="Services\KPNCountService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectCapability Remove="Services\XmlBuilderService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectCapability Remove="Models\TotalTax100Model.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectCapability Remove="Services\TotalTax100ModelBuilderService.cs" />
   </ItemGroup>
 
 </Project>

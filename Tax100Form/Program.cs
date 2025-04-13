@@ -1,4 +1,6 @@
+using Tax100Form.Models.Requests;
 using Tax100Form.Options;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -42,6 +44,11 @@ app.MapGet("/weatherforecast", () =>
 })
 .WithName("GetWeatherForecast")
 .WithOpenApi();
+
+app.MapPost("/KPNCount", (HttpContext context, TotalTax100Request request) => 
+{ 
+
+});
 
 app.Run();
 

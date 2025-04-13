@@ -213,11 +213,6 @@ namespace Tax100Form.Models
 		[Description("submit_date")]
         public required string SubmitDate { get; set; }
         #endregion
-
-        public Tax100Model()
-        {
-            
-        }
     }
 
 }
